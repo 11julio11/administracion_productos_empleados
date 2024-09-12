@@ -1,0 +1,12 @@
+
+==============================
+         FACTURA DE VENTA        
+==============================
+Fecha de venta: 12/09/2024 16:32:49
+Producto: parlante
+Cantidad vendida: 10
+Precio unitario: $69000.00
+Descuento: 19.0%
+Total a pagar: $558900.00
+==============================
+
