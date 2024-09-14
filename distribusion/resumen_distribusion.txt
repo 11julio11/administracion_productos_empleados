@@ -1,0 +1,4 @@
+Producto        Cantidad   Precio    
+gorra           2          $20000.00  
+gorra roja      3          $450000.00 
+silla           13         $32000.00  
