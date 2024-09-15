@@ -33,19 +33,19 @@ def main():
         if opcion == '1':
             producto = crear_producto()
             agregar_al_inventario(producto, inventario)
-            actualizar_distribusion(inventario)
+            actualizar_distribusion(inventario, DISTRIBUSION_DIR)
 
         elif opcion == '2':
             factura_venta = gestionar_salida(inventario)
             if factura_venta:
                 print(factura_venta)
-            actualizar_distribusion(inventario)
+            actualizar_distribusion(inventario, DISTRIBUSION_DIR)
 
         elif opcion == '3':
             mostrar_inventario(inventario)
 
         elif opcion == '4':
-            actualizar_distribusion(inventario)
+            actualizar_distribusion(inventario, DISTRIBUSION_DIR)
 
         elif opcion == '5':
             mostrar_facturas('ingreso')
