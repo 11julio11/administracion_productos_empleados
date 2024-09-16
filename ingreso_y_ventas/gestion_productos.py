@@ -1,7 +1,9 @@
 from datetime import datetime
 import os
 
-DISTRIBUSION_DIR = './distribusion/'
+# Definir las rutas de las carpetas
+FACTURAS_DIR = './facturas/'
+DISTRIBUSION_DIR = os.path.join(FACTURAS_DIR, 'distribusion/')
 
 class Producto:
     def __init__(self, nombre, precio, cantidad, descuento):
@@ -11,6 +13,7 @@ class Producto:
         self.descuento = descuento
         self.fecha_de_compra = self.obtener_fecha_actual()
         self.total = self.calcular_total()
+        self.cantidad_vendida = 0  # Inicializamos la cantidad vendida a 0
 
     def obtener_fecha_actual(self):
         return datetime.now().strftime("%d/%m/%Y")
@@ -48,21 +51,26 @@ class Producto:
             f"Total a pagar: ${total_venta:.2f}\n"
             f"{'=' * 50}\n"
         )
+        self.cantidad_vendida += cantidad_vendida  # Actualizamos la cantidad vendida
         return factura_venta
 
+# Asegurarse de que las carpetas necesarias existan
+def crear_carpetas():
+    if not os.path.exists(FACTURAS_DIR):
+        os.makedirs(FACTURAS_DIR)
+    if not os.path.exists(DISTRIBUSION_DIR):
+        os.makedirs(DISTRIBUSION_DIR)
+
 def guardar_factura(registro, tipo):
+    crear_carpetas()  # Asegurarse de que las carpetas se crean antes de guardar
     if tipo == 'ingreso':
-        archivo = os.path.join('facturas', 'facturas_ingreso.txt')
+        archivo = os.path.join(FACTURAS_DIR, 'facturas_ingreso.txt')
     elif tipo == 'venta':
-        archivo = os.path.join('facturas', 'facturas_venta.txt')
+        archivo = os.path.join(FACTURAS_DIR, 'facturas_venta.txt')
     else:
         print("Tipo de factura no válido.")
         return
-    
-    # Asegúrate de que el directorio para las facturas exista
-    if not os.path.exists('facturas'):
-        os.makedirs('facturas')
-    
+
     with open(archivo, 'a') as f:
         f.write(registro + "\n")
 
@@ -74,6 +82,7 @@ def crear_producto():
     descuento = float(input('Descuento en %: '))
 
     producto = Producto(nombre, precio, cantidad, descuento)
+    guardar_factura(producto.imprimir_factura(), 'ingreso')  # Guardar la factura de ingreso
     return producto
 
 def agregar_al_inventario(producto, inventario):
@@ -105,32 +114,37 @@ def gestionar_salida(inventario):
 
 def mostrar_facturas(tipo):
     if tipo == 'ingreso':
-        archivo = os.path.join('facturas', 'facturas_ingreso.txt')
+        archivo = os.path.join(FACTURAS_DIR, 'facturas_ingreso.txt')
     elif tipo == 'venta':
-        archivo = os.path.join('facturas', 'facturas_venta.txt')
+        archivo = os.path.join(FACTURAS_DIR, 'facturas_venta.txt')
     else:
         print("Tipo de factura no válido.")
         return
-    
+
     if not os.path.exists(archivo):
         print(f"No hay facturas de {tipo} disponibles.")
         return
-    
+
     with open(archivo, 'r') as f:
         print(f.read())
 
 def actualizar_distribusion(inventario):
+    crear_carpetas()  # Asegurarse de que la carpeta de distribución esté creada
     archivo_distribusion = os.path.join(DISTRIBUSION_DIR, 'resumen_distribusion.txt')
 
     with open(archivo_distribusion, 'w') as f:
-        f.write("{:<15} {:<10} {:<10}\n".format('Producto', 'Cantidad', 'Precio'))
+        # Escribir la cabecera de la tabla
+        f.write("{:<20} {:<10} {:<10} {:<20}\n".format('Producto', 'Cantidad', 'Precio', 'Productos vendidos'))
+        
+        # Escribir cada producto en la tabla
         for nombre, producto in inventario.items():
-            f.write(f"{nombre:<15} {producto.cantidad:<10} ${producto.precio:<10.2f}\n")
+            f.write(f"{nombre:<20} {producto.cantidad:<10} ${producto.precio:<10.2f} {producto.cantidad_vendida:<20}\n")
 
     print(f"Distribución actualizada en: {archivo_distribusion}")
 
 def main():
     inventario = {}
+    crear_carpetas()  # Crear las carpetas necesarias al iniciar el programa
 
     while True:
         print("\n1. Agregar producto")
@@ -146,19 +160,19 @@ def main():
         if opcion == '1':
             producto = crear_producto()
             agregar_al_inventario(producto, inventario)
-            actualizar_distribusion(inventario, DISTRIBUSION_DIR)
+            actualizar_distribusion(inventario)
 
         elif opcion == '2':
             factura_venta = gestionar_salida(inventario)
             if factura_venta:
                 print(factura_venta)
-            actualizar_distribusion(inventario, DISTRIBUSION_DIR)
+            actualizar_distribusion(inventario)
 
         elif opcion == '3':
             mostrar_inventario(inventario)
 
         elif opcion == '4':
-            actualizar_distribusion(inventario, DISTRIBUSION_DIR)
+            actualizar_distribusion(inventario)
 
         elif opcion == '5':
             mostrar_facturas('ingreso')

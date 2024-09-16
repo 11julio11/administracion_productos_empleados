@@ -1,0 +1,2 @@
+Producto             Cantidad   Precio     Productos vendidos  
+teclado              4          $56000.00   2                   
