@@ -1,2 +1,2 @@
 Producto             Cantidad   Precio     Productos vendidos  
-teclado              4          $56000.00   2                   
+mesa portatil        30         $500000.00  4                   

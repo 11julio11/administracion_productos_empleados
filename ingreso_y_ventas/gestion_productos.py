@@ -1,10 +1,11 @@
 from datetime import datetime
 import os
 
-# Definir las rutas de las carpetas
+# Definimos  las rutas de las carpetas
 FACTURAS_DIR = './facturas/'
 DISTRIBUSION_DIR = os.path.join(FACTURAS_DIR, 'distribusion/')
 
+#creamos una clase para gestionar los productos
 class Producto:
     def __init__(self, nombre, precio, cantidad, descuento):
         self.nombre = nombre
@@ -14,10 +15,12 @@ class Producto:
         self.fecha_de_compra = self.obtener_fecha_actual()
         self.total = self.calcular_total()
         self.cantidad_vendida = 0  # Inicializamos la cantidad vendida a 0
-
+    
+    #creamos un metodo para gestionar la fecha en tiempo real
     def obtener_fecha_actual(self):
         return datetime.now().strftime("%d/%m/%Y")
-
+    
+    #con este metodo calculamos la gestion de los productos y luego retornamos 
     def calcular_total(self):
         total_descuento = self.precio * self.cantidad * (1 - self.descuento / 100)
         return total_descuento
