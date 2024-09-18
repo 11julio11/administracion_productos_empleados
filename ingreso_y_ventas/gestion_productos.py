@@ -1,6 +1,16 @@
+# El módulo datetime proporciona clases y funciones para manipular fechas y horas.
 from datetime import datetime
+
+
+# El módulo os nos permite realizar operaciones relacionadas con el sistema de archivos,
+# como obtener el directorio actual, crear y cambiar directorios, 
+# y manipular archivos y rutas dentro del sistema operativo.
 import os
-from collections import defaultdict # collections y defaultdict sirven para 
+
+# El módulo collections proporcionara contenedores especializados como defaultdict,
+# el cual crea automáticamente un valor predeterminado para claves inexistentes en un diccionario,
+# evitando errores y facilitando operaciones como contar o agrupar elementos.
+from collections import defaultdict
 
 # Definimos las rutas de las carpetas
 FACTURAS_DIR = './facturas/'
@@ -53,14 +63,14 @@ class Producto:
             f"\n{'=' * 50}\n"
             f"            FACTURA DE VENTA    \n"
             f"{'=' * 50}\n"
-            f"|| Fecha de venta: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n ||"
-            f"|| Producto: {self.nombre}\n"
-            f"|| Cantidad vendida: {cantidad_vendida}\n ||"
-            f"|| Precio unitario: ${self.precio:.2f}\n  || "
-            f"|| Descuento: {self.descuento}%\n         ||   "
-            f"|| Total a pagar: ${total_venta:.2f}\n    ||  "
-            f"|| Ciudad de destino: {ciudad_destino}\n  ||   "
-            f"|| Nombre del local: {nombre_local}\n     ||   "  # Agregar el nombre del local
+            f"Fecha de venta: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n"
+            f"Producto: {self.nombre}\n"
+            f"Cantidad vendida: {cantidad_vendida}\n"
+            f"Precio unitario: ${self.precio:.2f}\n"
+            f"Descuento: {self.descuento}%\n"
+            f"Total a pagar: ${total_venta:.2f}\n"
+            f"Ciudad de destino: {ciudad_destino}\n"
+            f"Nombre del local: {nombre_local}\n"  # Agregar el nombre del local
             f"{'=' * 50}\n"
         )
         self.cantidad_vendida += cantidad_vendida  # Actualizamos la cantidad vendida
@@ -195,7 +205,9 @@ def actualizar_distribusion(inventario):
 def main():
     inventario = {}
     crear_carpetas()  # Crear las carpetas necesarias al iniciar el programa
-
+# while true maneja 
+    # Pedir opción al usuario y ejecutar la acción correspondiente
+    # Si el usuario elige salir, terminar el bucle while y salir del programa
     while True:
         print("\n1. Agregar producto")
         print("2. Vender producto")
