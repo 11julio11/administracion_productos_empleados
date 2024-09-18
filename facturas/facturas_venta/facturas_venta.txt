@@ -12,3 +12,17 @@ Ciudad de destino: barranquilla
 Nombre del local: smart ware
 ==================================================
 
+
+==================================================
+            FACTURA DE VENTA    
+==================================================
+Fecha de venta: 18/09/2024 10:17:42
+Producto: guantes de soldadura
+Cantidad vendida: 3
+Precio unitario: $67000.00
+Descuento: 7.0%
+Total a pagar: $186930.00
+Ciudad de destino: Cartegena
+Nombre del local: smart ware
+==================================================
+

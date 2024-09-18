@@ -1,2 +1,2 @@
 Producto             Cantidad   Precio     Productos vendidos   Ciudad de destino
-Olla arrocera        17         $90000.00   3                    barranquilla   
+guantes de soldadura 6          $67000.00   3                    Cartegena      

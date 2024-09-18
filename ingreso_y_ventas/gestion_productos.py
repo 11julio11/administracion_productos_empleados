@@ -1,6 +1,6 @@
 from datetime import datetime
 import os
-from collections import defaultdict
+from collections import defaultdict # collections y defaultdict sirven para 
 
 # Definimos las rutas de las carpetas
 FACTURAS_DIR = './facturas/'
@@ -53,14 +53,14 @@ class Producto:
             f"\n{'=' * 50}\n"
             f"            FACTURA DE VENTA    \n"
             f"{'=' * 50}\n"
-            f"Fecha de venta: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n"
-            f"Producto: {self.nombre}\n"
-            f"Cantidad vendida: {cantidad_vendida}\n"
-            f"Precio unitario: ${self.precio:.2f}\n"
-            f"Descuento: {self.descuento}%\n"
-            f"Total a pagar: ${total_venta:.2f}\n"
-            f"Ciudad de destino: {ciudad_destino}\n"
-            f"Nombre del local: {nombre_local}\n"  # Agregar el nombre del local
+            f"|| Fecha de venta: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n ||"
+            f"|| Producto: {self.nombre}\n"
+            f"|| Cantidad vendida: {cantidad_vendida}\n ||"
+            f"|| Precio unitario: ${self.precio:.2f}\n  || "
+            f"|| Descuento: {self.descuento}%\n         ||   "
+            f"|| Total a pagar: ${total_venta:.2f}\n    ||  "
+            f"|| Ciudad de destino: {ciudad_destino}\n  ||   "
+            f"|| Nombre del local: {nombre_local}\n     ||   "  # Agregar el nombre del local
             f"{'=' * 50}\n"
         )
         self.cantidad_vendida += cantidad_vendida  # Actualizamos la cantidad vendida

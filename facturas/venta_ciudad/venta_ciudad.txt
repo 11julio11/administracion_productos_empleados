@@ -1,1 +1,2 @@
 Producto: Olla arrocera, Cantidad vendida: 3, Ciudad de destino: barranquilla, Nombre del local: smart ware, Fecha: 17/09/2024 20:09:46
+Producto: guantes de soldadura, Cantidad vendida: 3, Ciudad de destino: Cartegena, Nombre del local: smart ware, Fecha: 18/09/2024 10:17:42
