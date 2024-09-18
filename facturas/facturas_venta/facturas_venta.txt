@@ -1,0 +1,14 @@
+
+==================================================
+            FACTURA DE VENTA    
+==================================================
+Fecha de venta: 17/09/2024 20:09:46
+Producto: Olla arrocera
+Cantidad vendida: 3
+Precio unitario: $90000.00
+Descuento: 7.0%
+Total a pagar: $251100.00
+Ciudad de destino: barranquilla
+Nombre del local: smart ware
+==================================================
+

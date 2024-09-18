@@ -1,2 +1,2 @@
-Producto             Cantidad   Precio     Productos vendidos  
-mesa portatil        30         $500000.00  4                   
+Producto             Cantidad   Precio     Productos vendidos   Ciudad de destino
+Olla arrocera        17         $90000.00   3                    barranquilla   
