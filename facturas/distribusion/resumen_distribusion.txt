@@ -1,2 +1,6 @@
-Producto             Cantidad   Precio     Productos vendidos   Ciudad de destino
-guantes de soldadura 6          $67000.00   3                    Cartegena      
+Producto             Cantidad   Precio     Productos vendidos   Ciudad de destino  Local     
+----------------------------------------------------------------------------------------------------
+telefono aoki        10         $600000.00  2                    cartagena       global store
+----------------------------------------------------------------------------------------------------
+bolso totto          10         $200000.00  2                    cartagena       nueva store
+----------------------------------------------------------------------------------------------------

@@ -2,23 +2,35 @@
 ==================================================
           FACTURA DE INGRESO   
 ==================================================
-Fecha de ingreso: 17/09/2024
-Producto: Olla arrocera
-Precio unitario: $90000.00
-Cantidad: 20
-Descuento: 7.0%
-Total a pagar: $1674000.00
+Fecha de ingreso: 19/09/2024
+Producto: telefono aoki
+Precio unitario: $600000.00
+Cantidad: 12
+Descuento: 11.0%
+Total a pagar: $6408000.00
 ==================================================
 
 
 ==================================================
           FACTURA DE INGRESO   
 ==================================================
-Fecha de ingreso: 18/09/2024
-Producto: guantes de soldadura
-Precio unitario: $67000.00
-Cantidad: 9
-Descuento: 7.0%
-Total a pagar: $560790.00
+Fecha de ingreso: 19/09/2024
+Producto: bolso totto
+Precio unitario: $200000.00
+Cantidad: 12
+Descuento: 19.0%
+Total a pagar: $1944000.00
+==================================================
+
+
+==================================================
+          FACTURA DE INGRESO   
+==================================================
+Fecha de ingreso: 19/09/2024
+Producto: lentes de sol
+Precio unitario: $60000.00
+Cantidad: 23
+Descuento: 9.0%
+Total a pagar: $1255800.00
 ==================================================
 
