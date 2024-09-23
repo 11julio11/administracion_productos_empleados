@@ -2,27 +2,13 @@
 ==================================================
             FACTURA DE VENTA    
 ==================================================
-Fecha de venta: 19/09/2024 15:19:05
-Producto: bolso totto
-Cantidad vendida: 2
-Precio unitario: $200000.00
-Descuento: 19.0%
-Total a pagar: $324000.00
-Ciudad de destino: cartagena
-Nombre del local: nueva store
-==================================================
-
-
-==================================================
-            FACTURA DE VENTA    
-==================================================
-Fecha de venta: 19/09/2024 15:20:29
-Producto: telefono aoki
-Cantidad vendida: 2
-Precio unitario: $600000.00
+Fecha de venta: 23/09/2024 16:43:18
+Producto: control remoto
+Cantidad vendida: 9
+Precio unitario: $60000.00
 Descuento: 11.0%
-Total a pagar: $1068000.00
+Total a pagar: $480600.00
 Ciudad de destino: cartagena
-Nombre del local: global store
+Nombre del local: smart tv
 ==================================================
 

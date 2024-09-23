@@ -1,2 +1,1 @@
-Producto: bolso totto     | Cantidad: 2          | Ciudad: cartagena            | Local: nueva store          | Fecha: 19/09/2024 15:19:05
-Producto: telefono aoki   | Cantidad: 2          | Ciudad: cartagena            | Local: global store         | Fecha: 19/09/2024 15:20:29
+Producto: control remoto  | Cantidad: 9          | Ciudad: cartagena            | Local: smart tv             | Fecha: 23/09/2024 16:43:18

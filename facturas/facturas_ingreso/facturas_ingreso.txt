@@ -2,35 +2,23 @@
 ==================================================
           FACTURA DE INGRESO   
 ==================================================
-Fecha de ingreso: 19/09/2024
-Producto: telefono aoki
-Precio unitario: $600000.00
-Cantidad: 12
-Descuento: 11.0%
-Total a pagar: $6408000.00
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 19/09/2024
-Producto: bolso totto
-Precio unitario: $200000.00
-Cantidad: 12
-Descuento: 19.0%
-Total a pagar: $1944000.00
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 19/09/2024
-Producto: lentes de sol
+Fecha de ingreso: 23/09/2024
+Producto: control remoto
 Precio unitario: $60000.00
-Cantidad: 23
-Descuento: 9.0%
-Total a pagar: $1255800.00
+Cantidad: 49
+Descuento: 11.0%
+Total a pagar: $2616600.00
+==================================================
+
+
+==================================================
+          FACTURA DE INGRESO   
+==================================================
+Fecha de ingreso: 23/09/2024
+Producto: motorola g32
+Precio unitario: $800000.00
+Cantidad: 29
+Descuento: 15.0%
+Total a pagar: $19720000.00
 ==================================================
 
