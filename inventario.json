@@ -1,0 +1,19 @@
+{
+    "crema almipro": {
+        "nombre": "crema almipro",
+        "precio": 80000.0,
+        "cantidad": 7,
+        "descuento": 7.0,
+        "fecha_de_compra": "24/09/2024",
+        "total": 744000.0,
+        "cantidad_vendida": 4,
+        "ventas": [
+            {
+                "cantidad": 3,
+                "ciudad": "cartagena",
+                "local": "smart ware",
+                "fecha": "24/09/2024 17:30:17"
+            }
+        ]
+    }
+}

@@ -1,4 +1,4 @@
 Producto             Cantidad   Precio     Productos vendidos   Ciudad de destino  Local     
 ----------------------------------------------------------------------------------------------------
-control remoto       40         $60000.00   9                    cartagena       smart tv  
+crema almipro        7          $80000.00   3                    cartagena       smart ware
 ----------------------------------------------------------------------------------------------------

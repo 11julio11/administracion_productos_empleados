@@ -1,6 +1,8 @@
-from datetime import datetime
+import json
 import os
+import signal
 from collections import defaultdict
+from datetime import datetime
 
 # Definimos las rutas de las carpetas
 FACTURAS_DIR = './facturas/'
@@ -9,6 +11,7 @@ VENTA_CIUDAD_DIR = os.path.join(FACTURAS_DIR, 'venta_ciudad/')
 INGRESO_FACTURAS_DIR = os.path.join(FACTURAS_DIR, 'facturas_ingreso/')
 VENTA_FACTURAS_DIR = os.path.join(FACTURAS_DIR, 'facturas_venta/')
 GASTOS_FACTURAS_DIR = os.path.join(FACTURAS_DIR, 'facturas_gastos/')
+INVENTARIO_FILE = 'inventario.json'  # Archivo para guardar el inventario
 
 # Clase Producto para gestionar los productos
 class Producto:
@@ -101,6 +104,19 @@ def crear_carpetas():
     if not os.path.exists(GASTOS_FACTURAS_DIR):
         os.makedirs(GASTOS_FACTURAS_DIR)
 
+# Persistir el inventario en un archivo JSON
+def guardar_inventario(inventario):
+    with open(INVENTARIO_FILE, 'w') as f:
+        json.dump({k: v.__dict__ for k, v in inventario.items()}, f)
+
+# Cargar el inventario desde el archivo JSON
+def cargar_inventario():
+    if os.path.exists(INVENTARIO_FILE):
+        with open(INVENTARIO_FILE, 'r') as f:
+            inventario_data = json.load(f)
+            return {nombre: Producto(**data) for nombre, data in inventario_data.items()}
+    return {}
+
 # Guardar las facturas
 def guardar_factura(registro, tipo):
     crear_carpetas()
@@ -114,6 +130,7 @@ def guardar_factura(registro, tipo):
         print("Tipo de factura no válido.")
         return
 
+    print(f"Guardando factura en: {archivo}")  # Debug
     with open(archivo, 'a') as f:
         f.write(registro + "\n")
 
@@ -123,7 +140,7 @@ def guardar_venta_ciudad(producto):
 
     with open(archivo_ciudad, 'a') as f:
         for venta in producto.ventas:
-            linea = f"Producto: {producto.nombre:<15} | Cantidad: {venta['cantidad']:<10} | Ciudad: {venta['ciudad']:<20} | Local: {venta['local']:<20} | Fecha: {venta['fecha']}\n"
+            linea = f"Ciudad: {venta['ciudad']:<20} | Local: {venta['local']:<20} | Producto: {producto.nombre:<15} | Cantidad: {venta['cantidad']:<10} | Fecha: {venta['fecha']}\n"
             f.write(linea)
 
 # Actualizar el archivo resumen_distribusion.txt
@@ -170,107 +187,62 @@ def crear_producto():
     return producto
 
 # Crear un gasto
-def registrar_gasto():
+def crear_gasto():
     print('Introduce los datos del gasto:')
     descripcion = input('Descripción del gasto: ').strip()
     monto = float(input('Monto del gasto: '))
     
     gasto = Gasto(descripcion, monto)
     guardar_factura(gasto.imprimir_factura_gasto(), 'gasto')
-    return gasto
 
-# Agregar un producto al inventario
-def agregar_al_inventario(producto, inventario):
-    if producto.nombre in inventario:
-        inventario[producto.nombre].cantidad += producto.cantidad
-    else:
-        inventario[producto.nombre] = producto
-
-# Mostrar inventario
-def mostrar_inventario(inventario):
-    for nombre, producto in inventario.items():
-        print(f"{nombre}: Cantidad {producto.cantidad}, Precio ${producto.precio:.2f}, Descuento {producto.descuento}%")
-
-# Realizar una venta
+# Función para gestionar las ventas
 def realizar_venta(inventario):
-    mostrar_inventario(inventario)
-    nombre_producto = input("Introduce el nombre del producto que deseas vender: ").strip()
-
+    nombre_producto = input("Introduce el nombre del producto a vender: ").strip()
     if nombre_producto in inventario:
-        producto = inventario[nombre_producto]
-        cantidad = int(input(f"¿Cuántas unidades de {producto.nombre} quieres vender?: "))
+        cantidad_vendida = int(input("Introduce la cantidad a vender: "))
         ciudad_destino = input("Introduce la ciudad de destino: ").strip()
         nombre_local = input("Introduce el nombre del local: ").strip()
 
-        if cantidad > producto.cantidad:
-            print("No hay suficiente inventario.")
-            return
+        if cantidad_vendida <= inventario[nombre_producto].cantidad:
+            factura_venta = inventario[nombre_producto].imprimir_factura_venta(cantidad_vendida, ciudad_destino, nombre_local)
+            guardar_factura(factura_venta, 'venta')
+            guardar_venta_ciudad(inventario[nombre_producto])
+            actualizar_distribusion(inventario)
 
-        producto.cantidad -= cantidad
-        factura_venta = producto.imprimir_factura_venta(cantidad, ciudad_destino, nombre_local)
-        guardar_factura(factura_venta, 'venta')
-        guardar_venta_ciudad(producto)
-
-        print(factura_venta)
-        actualizar_distribusion(inventario)
+            inventario[nombre_producto].cantidad -= cantidad_vendida
+            guardar_inventario(inventario)  # Guardamos el inventario actualizado
+            print("Venta realizada y factura guardada.")
+        else:
+            print("No hay suficiente cantidad disponible para vender.")
     else:
-        print("El producto no existe en el inventario.")
-
-# Mostrar facturas guardadas
-def mostrar_facturas(tipo):
-    if tipo == 'ingreso':
-        archivo = os.path.join(INGRESO_FACTURAS_DIR, 'facturas_ingreso.txt')
-    elif tipo == 'venta':
-        archivo = os.path.join(VENTA_FACTURAS_DIR, 'facturas_venta.txt')
-    elif tipo == 'gasto':
-        archivo = os.path.join(GASTOS_FACTURAS_DIR, 'facturas_gastos.txt')
-    else:
-        print("Tipo de facturas no válido.")
-        return
-
-    if os.path.exists(archivo):
-        with open(archivo, 'r') as f:
-            contenido = f.read()
-            print(f"\nFacturas de {tipo}:\n{contenido}")
-    else:
-        print(f"No se encontraron facturas de {tipo}.")
+        print("Producto no encontrado en el inventario.")
 
 # Función principal
 def main():
-    inventario = {}
-    while True:
-        print("\n--- Menú de opciones ---")
-        print("1. Ingresar nuevo producto")
-        print("2. Registrar venta")
-        print("3. Mostrar inventario")
-        print("4. Registrar gasto")
-        print("5. Mostrar facturas de ingreso")
-        print("6. Mostrar facturas de venta")
-        print("7. Mostrar facturas de gasto")
-        print("8. Salir")
+    crear_carpetas()
+    inventario = cargar_inventario()
 
-        opcion = input("Selecciona una opción: ").strip()
+    while True:
+        print("\nOpciones:")
+        print("1. Crear un nuevo producto")
+        print("2. Crear un gasto")
+        print("3. Realizar una venta")
+        print("4. Salir")
+        
+        opcion = input("Selecciona una opción: ")
 
         if opcion == '1':
             producto = crear_producto()
-            agregar_al_inventario(producto, inventario)
+            inventario[producto.nombre] = producto
+            guardar_inventario(inventario)  # Guardamos el nuevo producto en el inventario
         elif opcion == '2':
-            realizar_venta(inventario)
+            crear_gasto()
         elif opcion == '3':
-            mostrar_inventario(inventario)
+            realizar_venta(inventario)
         elif opcion == '4':
-            registrar_gasto()
-        elif opcion == '5':
-            mostrar_facturas('ingreso')
-        elif opcion == '6':
-            mostrar_facturas('venta')
-        elif opcion == '7':
-            mostrar_facturas('gasto')
-        elif opcion == '8':
-            print("Saliendo del programa.")
             break
         else:
-            print("Opción no válida, por favor intenta de nuevo.")
+            print("Opción no válida. Inténtalo de nuevo.")
 
 if __name__ == "__main__":
     main()

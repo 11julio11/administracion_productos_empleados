@@ -2,8 +2,8 @@
 ==================================================
             FACTURA DE GASTO    
 ==================================================
-Fecha de gasto: 23/09/2024
-Descripción: venta de aparato electronico
-Monto: $480600.00
+Fecha de gasto: 24/09/2024
+Descripción: venta de crema almipro
+Monto: $223200.00
 ==================================================
 

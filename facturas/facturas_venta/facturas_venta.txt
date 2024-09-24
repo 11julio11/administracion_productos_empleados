@@ -2,13 +2,13 @@
 ==================================================
             FACTURA DE VENTA    
 ==================================================
-Fecha de venta: 23/09/2024 16:43:18
-Producto: control remoto
-Cantidad vendida: 9
-Precio unitario: $60000.00
-Descuento: 11.0%
-Total a pagar: $480600.00
+Fecha de venta: 24/09/2024 17:30:17
+Producto: crema almipro
+Cantidad vendida: 3
+Precio unitario: $80000.00
+Descuento: 7.0%
+Total a pagar: $223200.00
 Ciudad de destino: cartagena
-Nombre del local: smart tv
+Nombre del local: smart ware
 ==================================================
 
