@@ -1,1 +1,4 @@
-Ciudad: cartagena            | Local: smart ware           | Producto: crema almipro   | Cantidad: 3          | Fecha: 24/09/2024 17:30:17
+Ciudad: medellin             | Local: global tv            | Producto: moto g32        | Cantidad: 4          | Fecha: 25/09/2024 15:31:03
+Ciudad: cartagena            | Local: start ware           | Producto: tablet iphone   | Cantidad: 6          | Fecha: 25/09/2024 15:45:43
+Producto: tablet iphone | Ciudad: bucaramanga | Local: store suckit | Cantidad: 6 | Fecha: 25/09/2024 15:54:14
+Producto: lonchera | Ciudad: santa marta | Local: frist ngint | Cantidad: 8 | Fecha: 25/09/2024 16:46:56

@@ -1,7 +1,6 @@
 import json  # Importamos el módulo para trabajar con archivos JSON.
 import os  # Importamos el módulo para interactuar con el sistema de archivos.
 import signal  # Importamos el módulo para manejar señales del sistema.
-from collections import defaultdict  # Importamos defaultdict para crear diccionarios con valores por defecto.
 from datetime import datetime  # Importamos datetime para trabajar con fechas y horas.
 
 # Definimos las rutas de las carpetas donde se almacenarán las facturas.
@@ -15,15 +14,15 @@ INVENTARIO_FILE = 'inventario.json'  # Archivo para guardar el inventario de pro
 
 # Clase Producto para gestionar los productos en el inventario.
 class Producto:
-    def __init__(self, nombre, precio, cantidad, descuento):
+    def __init__(self, nombre, precio, cantidad, descuento, fecha_de_compra=None, total=None, cantidad_vendida=0, ventas=None):
         self.nombre = nombre  # Nombre del producto.
         self.precio = precio  # Precio del producto.
         self.cantidad = cantidad  # Cantidad disponible en inventario.
         self.descuento = descuento  # Descuento aplicable al producto.
-        self.fecha_de_compra = self.obtener_fecha_actual()  # Fecha de ingreso del producto.
-        self.total = self.calcular_total()  # Total a pagar considerando el descuento.
-        self.cantidad_vendida = 1  # Contador de cantidad vendida.
-        self.ventas = []  # Lista para almacenar información sobre las ventas.
+        self.fecha_de_compra = fecha_de_compra if fecha_de_compra is not None else self.obtener_fecha_actual()  # Fecha de ingreso del producto.
+        self.total = total if total is not None else self.calcular_total()  # Total a pagar considerando el descuento.
+        self.cantidad_vendida = cantidad_vendida  # Contador de cantidad vendida.
+        self.ventas = ventas if ventas is not None else []  # Lista para almacenar información sobre las ventas.
 
     def obtener_fecha_actual(self):
         # Devuelve la fecha actual en formato DD/MM/YYYY.
@@ -34,7 +33,7 @@ class Producto:
         total_descuento = self.precio * self.cantidad * (1 - self.descuento / 100)
         return total_descuento
 
-    def imprimir_factura(self):
+    def imprimir_factura_ingreso(self):
         # Genera una factura de ingreso del producto.
         factura = (
             f"\n{'=' * 50}\n"
@@ -68,8 +67,19 @@ class Producto:
             f"{'=' * 50}\n"
         )
         self.cantidad_vendida += cantidad_vendida  # Actualiza la cantidad vendida total.
+        self.cantidad -= cantidad_vendida  # Actualiza la cantidad disponible en inventario.
         self.ventas.append({'cantidad': cantidad_vendida, 'ciudad': ciudad_destino, 'local': nombre_local, 'fecha': datetime.now().strftime('%d/%m/%Y %H:%M:%S')})  # Añade la venta a la lista.
         return factura_venta
+
+    def mostrar_inventario(self):
+        # Muestra la información del producto.
+        return (
+            f"Nombre: {self.nombre} | "
+            f"Precio: ${self.precio:.2f} | "
+            f"Cantidad: {self.cantidad} | "
+            f"Descuento: {self.descuento}% | "
+            f"Cantidad Vendida: {self.cantidad_vendida}\n"
+        )
 
 # Clase para gestionar los gastos.
 class Gasto:
@@ -150,39 +160,103 @@ def guardar_venta_ciudad(producto):
 
     with open(archivo_ciudad, 'a') as f:
         for venta in producto.ventas:
-            linea = f"Ciudad: {venta['ciudad']:<20} | Local: {venta['local']:<20} | Producto: {producto.nombre:<15} | Cantidad: {venta['cantidad']:<10} | Fecha: {venta['fecha']}\n"
-            f.write(linea)  # Escribe la línea de venta en el archivo.
+            f.write(f"Producto: {producto.nombre} | Ciudad: {venta['ciudad']} | Local: {venta['local']} | Cantidad: {venta['cantidad']} | Fecha: {venta['fecha']}\n")
 
-# Actualizar el archivo resumen_distribusion.txt.
+# Actualizar el archivo resumen_distribusion.txt con el resumen de productos.
 def actualizar_distribusion(inventario):
-    # Crea un resumen de la distribución de productos.
-    crear_carpetas()
+    # Actualiza el archivo de distribución con el resumen de productos.
+    resumen_file = os.path.join(DISTRIBUSION_DIR, 'resumen_distribusion.txt')
+    with open(resumen_file, 'w') as f:
+        for nombre, producto in inventario.items():
+            f.write(f"Producto: {nombre} | Cantidad vendida: {producto.cantidad_vendida} | Stock: {producto.cantidad}\n")
+            for venta in producto.ventas:  # Iteramos sobre las ventas registradas del producto.
+                f.write(f"Ciudad: {venta['ciudad']} | Local: {venta['local']}| Producto: {nombre} | Cantidad: {venta['cantidad']} | Fecha: {venta['fecha']}\n")
+ # Escribe el resumen.
 
-    if not inventario:
-        print("El inventario está vacío. No se puede generar el resumen.")
-        return
-
-    archivo_distribusion = os.path.join(DISTRIBUSION_DIR, 'resumen_distribusion.txt')
-
-    with open(archivo_distribusion, 'w') as f:
-        for producto in inventario.values():
-            f.write(f"Producto: {producto.nombre}, Cantidad vendida: {producto.cantidad_vendida}\n")  # Guarda el resumen.
-
-# Manejo de señales para cerrar el programa.
-def signal_handler(sig, frame):
-    # Función que se ejecuta al recibir una señal de cierre.
-    print("Cerrando el programa...")
+# Manejar la señal de interrupción (Ctrl+C) para cerrar el programa.
+def manejar_salida(signal_num, frame):
+    print("\nSaliendo del programa. ¡Hasta luego!")
     exit(0)
 
-# Configurar la señal para manejar el cierre del programa.
-signal.signal(signal.SIGINT, signal_handler)  # Permite cerrar el programa con Ctrl+C.
+signal.signal(signal.SIGINT, manejar_salida)
 
-# Función principal para ejecutar el programa.
 def main():
-    crear_carpetas()  # Crea las carpetas necesarias.
+    # Función principal que ejecuta el programa.
+    crear_carpetas()  # Crea las carpetas necesarias al inicio.
     inventario = cargar_inventario()  # Carga el inventario existente.
-    
-    # Aquí puedes implementar más lógica del programa, como agregar productos, registrar ventas, etc.
 
-if __name__ == "__main__":
-    main()  # Llama a la función principal al ejecutar el script.
+    while True:
+        print("\nOpciones:")
+        print("1. Ingresar producto")
+        print("2. Vender producto")
+        print("3. Registrar gasto")
+        print("4. Mostrar facturas")
+        print("5. Mostrar inventario")  # Opción para mostrar inventario.
+        print("6. Actualizar distribución")
+        print("7. Salir")
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == '1':
+            nombre = input("Ingrese el nombre del producto: ")
+            precio = float(input("Ingrese el precio del producto: "))
+            cantidad = int(input("Ingrese la cantidad del producto: "))
+            descuento = float(input("Ingrese el descuento (%): "))
+            producto = Producto(nombre, precio, cantidad, descuento)
+            inventario[nombre] = producto  # Añade el nuevo producto al inventario.
+            guardar_inventario(inventario)  # Guarda el inventario.
+            factura = producto.imprimir_factura_ingreso()  # Genera la factura de ingreso.
+            guardar_factura(factura, 'ingreso')  # Guarda la factura de ingreso.
+            print(factura)  # Muestra la factura de ingreso.
+
+        elif opcion == '2':
+            nombre = input("Ingrese el nombre del producto a vender: ")
+            if nombre in inventario:
+                cantidad_vendida = int(input("Ingrese la cantidad a vender: "))
+                ciudad_destino = input("Ingrese la ciudad de destino: ")
+                nombre_local = input("Ingrese el nombre del local: ")
+                factura_venta = inventario[nombre].imprimir_factura_venta(cantidad_vendida, ciudad_destino, nombre_local)  # Genera la factura de venta.
+                guardar_factura(factura_venta, 'venta')  # Guarda la factura de venta.
+                guardar_venta_ciudad(inventario[nombre])  # Guarda la venta por ciudad.
+                actualizar_distribusion(inventario)  # Actualiza el archivo de distribución.
+                guardar_inventario(inventario)  # Actualiza el inventario en el archivo JSON.
+                print(factura_venta)  # Muestra la factura de venta.
+            else:
+                print("Producto no encontrado en el inventario.")
+
+        elif opcion == '3':
+            descripcion = input("Ingrese la descripción del gasto: ")
+            monto = float(input("Ingrese el monto del gasto: "))
+            gasto = Gasto(descripcion, monto)  # Crea un nuevo gasto.
+            factura_gasto = gasto.imprimir_factura_gasto()  # Genera la factura del gasto.
+            guardar_factura(factura_gasto, 'gasto')  # Guarda la factura del gasto.
+            print(factura_gasto)  # Muestra la factura del gasto.
+
+        elif opcion == '4':
+            print("Mostrando facturas de ingreso, venta y gasto.")
+            print("Facturas de ingreso:")
+            with open(os.path.join(INGRESO_FACTURAS_DIR, 'facturas_ingreso.txt'), 'r') as f:
+                print(f.read())
+            print("Facturas de venta:")
+            with open(os.path.join(VENTA_FACTURAS_DIR, 'facturas_venta.txt'), 'r') as f:
+                print(f.read())
+            print("Facturas de gasto:")
+            with open(os.path.join(GASTOS_FACTURAS_DIR, 'facturas_gastos.txt'), 'r') as f:
+                print(f.read())
+
+        elif opcion == '5':
+            print("Inventario actual:")
+            for producto in inventario.values():
+                print(producto.mostrar_inventario())  # Muestra el inventario.
+
+        elif opcion == '6':
+            actualizar_distribusion(inventario)  # Actualiza el archivo de distribución.
+            print("Distribución actualizada.")
+
+        elif opcion == '7':
+            print("Saliendo del programa.")
+            break
+        else:
+            print("Opción no válida. Intente de nuevo.")
+
+if __name__ == '__main__':
+    main()  # Ejecuta la función principal.

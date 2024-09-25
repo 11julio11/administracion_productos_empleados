@@ -1,4 +1,6 @@
-Producto             Cantidad   Precio     Productos vendidos   Ciudad de destino  Local     
-----------------------------------------------------------------------------------------------------
-crema almipro        7          $80000.00   3                    cartagena       smart ware
-----------------------------------------------------------------------------------------------------
+Producto: moto g32 | Cantidad vendida: 0 | Stock: 34
+Producto: tablet iphone | Cantidad vendida: 6 | Stock: 50
+Ciudad: bucaramanga | Local: store suckit| Producto: tablet iphone | Cantidad: 6 | Fecha: 25/09/2024 15:54:14
+Producto: lochera  | Cantidad vendida: 0 | Stock: 67
+Producto: lonchera | Cantidad vendida: 8 | Stock: 26
+Ciudad: santa marta | Local: frist ngint| Producto: lonchera | Cantidad: 8 | Fecha: 25/09/2024 16:46:56

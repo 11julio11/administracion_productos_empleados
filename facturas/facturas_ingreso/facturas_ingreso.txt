@@ -2,11 +2,47 @@
 ==================================================
           FACTURA DE INGRESO   
 ==================================================
-Fecha de ingreso: 24/09/2024
-Producto: crema almipro
-Precio unitario: $80000.00
-Cantidad: 10
-Descuento: 7.0%
-Total a pagar: $744000.00
+Fecha de ingreso: 25/09/2024
+Producto: moto g32
+Precio unitario: $800000.00
+Cantidad: 34
+Descuento: 19.0%
+Total a pagar: $22032000.00
+==================================================
+
+
+==================================================
+          FACTURA DE INGRESO   
+==================================================
+Fecha de ingreso: 25/09/2024
+Producto: tablet iphone
+Precio unitario: $1600000.00
+Cantidad: 56
+Descuento: 29.0%
+Total a pagar: $63616000.00
+==================================================
+
+
+==================================================
+          FACTURA DE INGRESO   
+==================================================
+Fecha de ingreso: 25/09/2024
+Producto: lochera 
+Precio unitario: $79000.00
+Cantidad: 67
+Descuento: 19.0%
+Total a pagar: $4287330.00
+==================================================
+
+
+==================================================
+          FACTURA DE INGRESO   
+==================================================
+Fecha de ingreso: 25/09/2024
+Producto: lonchera
+Precio unitario: $78900.00
+Cantidad: 34
+Descuento: 18.0%
+Total a pagar: $2199732.00
 ==================================================
 

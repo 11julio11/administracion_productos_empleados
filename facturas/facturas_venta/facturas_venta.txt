@@ -2,13 +2,55 @@
 ==================================================
             FACTURA DE VENTA    
 ==================================================
-Fecha de venta: 24/09/2024 17:30:17
-Producto: crema almipro
-Cantidad vendida: 3
-Precio unitario: $80000.00
-Descuento: 7.0%
-Total a pagar: $223200.00
+Fecha de venta: 25/09/2024 15:31:03
+Producto: moto g32
+Cantidad vendida: 4
+Precio unitario: $800000.00
+Descuento: 19.0%
+Total a pagar: $2592000.00
+Ciudad de destino: medellin
+Nombre del local: global tv
+==================================================
+
+
+==================================================
+            FACTURA DE VENTA    
+==================================================
+Fecha de venta: 25/09/2024 15:45:43
+Producto: tablet iphone
+Cantidad vendida: 6
+Precio unitario: $1600000.00
+Descuento: 29.0%
+Total a pagar: $6816000.00
 Ciudad de destino: cartagena
-Nombre del local: smart ware
+Nombre del local: start ware
+==================================================
+
+
+==================================================
+            FACTURA DE VENTA    
+==================================================
+Fecha de venta: 25/09/2024 15:54:14
+Producto: tablet iphone
+Cantidad vendida: 6
+Precio unitario: $1600000.00
+Descuento: 29.0%
+Total a pagar: $6816000.00
+Ciudad de destino: bucaramanga
+Nombre del local: store suckit
+==================================================
+
+
+==================================================
+            FACTURA DE VENTA    
+==================================================
+Fecha de venta: 25/09/2024 16:46:56
+Producto: lonchera
+Cantidad vendida: 8
+Precio unitario: $78900.00
+Descuento: 18.0%
+Total a pagar: $517584.00
+Ciudad de destino: santa marta
+Nombre del local: frist ngint
 ==================================================
 
