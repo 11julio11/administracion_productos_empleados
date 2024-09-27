@@ -2,3 +2,4 @@ Ciudad: medellin             | Local: global tv            | Producto: moto g32 
 Ciudad: cartagena            | Local: start ware           | Producto: tablet iphone   | Cantidad: 6          | Fecha: 25/09/2024 15:45:43
 Producto: tablet iphone | Ciudad: bucaramanga | Local: store suckit | Cantidad: 6 | Fecha: 25/09/2024 15:54:14
 Producto: lonchera | Ciudad: santa marta | Local: frist ngint | Cantidad: 8 | Fecha: 25/09/2024 16:46:56
+Producto: lonchera | Ciudad: Manizales | Local: store  | Cantidad: 7 | Fecha: 26/09/2024 15:09:55

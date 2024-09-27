@@ -1,0 +1,27 @@
+[
+    {
+        "nombre": "david perez gomez",
+        "apellido": "marin ",
+        "edad": "34",
+        "telefono": "3256778090",
+        "correo": "gomezmartindavid@gmail.com",
+        "direccion": "calle veltran",
+        "fecha_ingreso": "27/09/2024",
+        "turnos": [
+            {
+                "inicio": "2024-09-27 17:04:50",
+                "fin": "2024-09-27 17:05:32"
+            }
+        ]
+    },
+    {
+        "nombre": "cesar ",
+        "apellido": "perez rodriguez",
+        "edad": "45",
+        "telefono": "3245678899",
+        "correo": "rodriguezcesar56@gmail.com",
+        "direccion": "las palmas ",
+        "fecha_ingreso": "27/09/2024",
+        "turnos": []
+    }
+]

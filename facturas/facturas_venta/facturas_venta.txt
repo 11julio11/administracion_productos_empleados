@@ -54,3 +54,17 @@ Ciudad de destino: santa marta
 Nombre del local: frist ngint
 ==================================================
 
+
+==================================================
+            FACTURA DE VENTA    
+==================================================
+Fecha de venta: 26/09/2024 15:09:55
+Producto: lonchera
+Cantidad vendida: 7
+Precio unitario: $78900.00
+Descuento: 18.0%
+Total a pagar: $452886.00
+Ciudad de destino: Manizales
+Nombre del local: store 
+==================================================
+

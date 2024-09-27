@@ -2,5 +2,6 @@ Producto: moto g32 | Cantidad vendida: 0 | Stock: 34
 Producto: tablet iphone | Cantidad vendida: 6 | Stock: 50
 Ciudad: bucaramanga | Local: store suckit| Producto: tablet iphone | Cantidad: 6 | Fecha: 25/09/2024 15:54:14
 Producto: lochera  | Cantidad vendida: 0 | Stock: 67
-Producto: lonchera | Cantidad vendida: 8 | Stock: 26
-Ciudad: santa marta | Local: frist ngint| Producto: lonchera | Cantidad: 8 | Fecha: 25/09/2024 16:46:56
+Ciudad: santa marta | Local: frist ngint| Producto: lochera  | Cantidad: 8 | Fecha: 25/09/2024 15:48:32
+Producto: lonchera | Cantidad vendida: 7 | Stock: 27
+Ciudad: Manizales | Local: store | Producto: lonchera | Cantidad: 7 | Fecha: 26/09/2024 15:09:55
