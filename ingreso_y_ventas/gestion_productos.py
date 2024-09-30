@@ -221,6 +221,8 @@ def guardar_factura(registro, tipo):
         archivo = os.path.join(VENTA_FACTURAS_DIR, 'facturas_venta.txt')
     elif tipo == 'gasto':
         archivo = os.path.join(GASTOS_FACTURAS_DIR, 'facturas_gastos.txt')
+    elif tipo == 'registro':
+        archivo = os.path.join(EMPLOYEES_DIR, 'registro_employess.txt')
     else:
         print("Tipo de factura no válido.")
         return
