@@ -54,3 +54,14 @@ Ciudad: bucaramanga
 Local: global store
 ==================================================
 
+
+==================================================
+            FACTURA DE GASTO    
+==================================================
+Fecha de gasto: 30/09/2024
+Descripción: venta de control remoto
+Monto: $10000.00
+Ciudad: manizales
+Local: store tecnology
+==================================================
+

@@ -4,3 +4,5 @@ Producto: tablet iphone | Ciudad: bucaramanga | Local: store suckit | Cantidad: 
 Producto: lonchera | Ciudad: santa marta | Local: frist ngint | Cantidad: 8 | Fecha: 25/09/2024 16:46:56
 Producto: lonchera | Ciudad: Manizales | Local: store  | Cantidad: 7 | Fecha: 26/09/2024 15:09:55
 Producto: control remoto | Cantidad: 5 | Ciudad: bucaramanga | Local: global store | Fecha: 28/09/2024 10:20:16
+Producto: control remoto | Cantidad: 5 | Ciudad: bucaramanga | Local: global store | Fecha: 28/09/2024 10:20:16
+Producto: control remoto | Cantidad: 2 | Ciudad: manizales | Local: store tecnology | Fecha: 30/09/2024 14:21:39

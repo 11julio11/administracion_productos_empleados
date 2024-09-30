@@ -63,17 +63,23 @@
     "control remoto": {
         "nombre": "control remoto",
         "precio": 5000.0,
-        "cantidad": 7,
+        "cantidad": 5,
         "descuento": 9.0,
         "fecha_de_compra": "28/09/2024",
         "total": 54600.0,
-        "cantidad_vendida": 5,
+        "cantidad_vendida": 7,
         "ventas": [
             {
                 "cantidad": 5,
                 "ciudad": "bucaramanga",
                 "local": "global store",
                 "fecha": "28/09/2024 10:20:16"
+            },
+            {
+                "cantidad": 2,
+                "ciudad": "manizales",
+                "local": "store tecnology",
+                "fecha": "30/09/2024 14:21:39"
             }
         ]
     }
