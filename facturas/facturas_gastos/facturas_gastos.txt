@@ -43,3 +43,14 @@ Descripción: venta de lonchera
 Monto: $452886.00
 ==================================================
 
+
+==================================================
+            FACTURA DE GASTO    
+==================================================
+Fecha de gasto: 28/09/2024
+Descripción: venta de control remoto
+Monto: $22750.00
+Ciudad: bucaramanga
+Local: global store
+==================================================
+

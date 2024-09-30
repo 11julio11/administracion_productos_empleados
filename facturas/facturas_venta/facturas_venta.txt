@@ -68,3 +68,17 @@ Ciudad de destino: Manizales
 Nombre del local: store 
 ==================================================
 
+
+==================================================
+            FACTURA DE VENTA    
+==================================================
+Fecha de venta: 28/09/2024 10:20:16
+Producto: control remoto
+Cantidad vendida: 5
+Precio unitario: $5000.00
+Descuento: 9.0%
+Total a pagar: $22750.00
+Ciudad de destino: bucaramanga
+Nombre del local: global store
+==================================================
+
