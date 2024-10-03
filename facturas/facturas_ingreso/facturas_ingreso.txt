@@ -2,71 +2,23 @@
 ==================================================
           FACTURA DE INGRESO   
 ==================================================
-Fecha de ingreso: 25/09/2024
-Producto: moto g32
-Precio unitario: $800000.00
-Cantidad: 34
-Descuento: 19.0%
-Total a pagar: $22032000.00
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 25/09/2024
-Producto: tablet iphone
-Precio unitario: $1600000.00
-Cantidad: 56
-Descuento: 29.0%
-Total a pagar: $63616000.00
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 25/09/2024
-Producto: lochera 
-Precio unitario: $79000.00
-Cantidad: 67
-Descuento: 19.0%
-Total a pagar: $4287330.00
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 25/09/2024
-Producto: lonchera
-Precio unitario: $78900.00
-Cantidad: 34
-Descuento: 18.0%
-Total a pagar: $2199732.00
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 28/09/2024
-Producto: control remoto
-Precio unitario: $5000.00
-Cantidad: 12
+Fecha de ingreso: 03/10/2024
+Producto: atomizador
+Precio unitario: $20000.00
+Cantidad: 45
 Descuento: 9.0%
-Total a pagar: $54600.00
+Total a pagar: $819000.00
 ==================================================
 
 
 ==================================================
           FACTURA DE INGRESO   
 ==================================================
-Fecha de ingreso: 30/09/2024
-Producto: cepillo capilar
-Precio unitario: $45000.00
-Cantidad: 67
-Descuento: 6.0%
-Total a pagar: $2834100.00
+Fecha de ingreso: 03/10/2024
+Producto: atomizador
+Precio unitario: $15.00
+Cantidad: 65
+Descuento: 9.0%
+Total a pagar: $887.25
 ==================================================
 

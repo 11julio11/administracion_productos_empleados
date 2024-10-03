@@ -8,4 +8,8 @@ Ciudad: Manizales | Local: store  | Producto: lonchera | Cantidad: 7 | Fecha: 26
 Producto: control remoto | Cantidad vendida: 7 | Stock: 5
 Ciudad: bucaramanga | Local: global store | Producto: control remoto | Cantidad: 5 | Fecha: 28/09/2024 10:20:16
 Ciudad: manizales | Local: store tecnology | Producto: control remoto | Cantidad: 2 | Fecha: 30/09/2024 14:21:39
-Producto: cepillo capilar | Cantidad vendida: 0 | Stock: 67
+Producto: cepillo capilar | Cantidad vendida: 7 | Stock: 60
+Ciudad: bucaramanga  | Local: global store2 | Producto: cepillo capilar | Cantidad: 7 | Fecha: 03/10/2024 16:01:49
+Producto: audifonos  | Cantidad vendida: 0 | Stock: 45
+Producto: atomizador | Cantidad vendida: 5 | Stock: 60
+Ciudad: magangue | Local: mangtv | Producto: atomizador | Cantidad: 5 | Fecha: 03/10/2024 17:45:52

@@ -17,7 +17,6 @@ REGISTRO_EMPLOYEES_DIR = os.path.join(EMPLOYEES_DIR, 'registro_employees/')
 EMPLOYEES_FILE = 'employees_data.json'  # Archivo para guardar los datos de empleados.
 
 # ---------------------------------- Gestión de Productos ----------------------------------
-
 class Producto:
     def __init__(self, nombre, precio, cantidad, descuento, fecha_de_compra=None, total=None, cantidad_vendida=0, ventas=None):
         self.nombre = nombre
@@ -33,6 +32,8 @@ class Producto:
         return datetime.now().strftime("%d/%m/%Y")
 
     def calcular_total(self):
+        if self.descuento < 0 or self.descuento > 100:
+            raise ValueError("El descuento debe estar entre 0 y 100.")
         return self.precio * self.cantidad * (1 - self.descuento / 100)
 
     def imprimir_factura_ingreso(self):
@@ -84,8 +85,8 @@ class Producto:
             f"Cantidad Vendida: {self.cantidad_vendida}\n"
         )
 
-# ---------------------------------- Gestión de Gastos ----------------------------------
 
+# ---------------------------------- Gestión de Gastos ----------------------------------
 class Gasto:
     def __init__(self, descripcion, monto, ciudad, local):
         self.descripcion = descripcion
@@ -109,6 +110,7 @@ class Gasto:
             f"Local: {self.local}\n"
             f"{'=' * 50}\n"
         )
+
 
 # ---------------------------------- Gestión de Empleados ----------------------------------
 
@@ -184,14 +186,14 @@ class Empleado:
             direccion=data['direccion']
         )
         empleado.fecha_ingreso = data['fecha_ingreso']
-        empleado.turnos = [
-            {
+        for turno in data['turnos']:
+            turno_data = {
                 'inicio': datetime.strptime(turno['inicio'], '%Y-%m-%d %H:%M:%S'),
                 'fin': datetime.strptime(turno['fin'], '%Y-%m-%d %H:%M:%S') if turno['fin'] else None
             }
-            for turno in data.get('turnos', [])
-        ]
+            empleado.turnos.append(turno_data)
         return empleado
+
 
 # ---------------------------------- Funciones Generales ----------------------------------
 
@@ -221,13 +223,12 @@ def guardar_factura(registro, tipo):
         archivo = os.path.join(VENTA_FACTURAS_DIR, 'facturas_venta.txt')
     elif tipo == 'gasto':
         archivo = os.path.join(GASTOS_FACTURAS_DIR, 'facturas_gastos.txt')
-    elif tipo == 'registro':
-        archivo = os.path.join(EMPLOYEES_DIR, 'registro_employess.txt')
     else:
         print("Tipo de factura no válido.")
         return
     with open(archivo, 'a') as f:
         f.write(registro + "\n")
+
 
 def guardar_venta_ciudad(producto):
     archivo_ciudad = os.path.join(VENTA_CIUDAD_DIR, 'venta_ciudad.txt')
@@ -276,19 +277,41 @@ def registrar_empleado(empleados):
     telefono = input("Ingrese el teléfono del empleado: ")
     correo = input("Ingrese el correo electrónico del empleado: ")
     direccion = input("Ingrese la dirección del empleado: ")
+    
     empleado = Empleado(nombre, apellido, edad, telefono, correo, direccion)
+    
+    # Crear la carpeta individual del empleado
+    empleado_dir = os.path.join(REGISTRO_EMPLOYEES_DIR, f"{nombre}_{apellido}/")
+    os.makedirs(empleado_dir, exist_ok=True)
+
+    # Guardar la información del empleado en un archivo
+    info_file = os.path.join(empleado_dir, 'informacion_empleado.txt')
+    with open(info_file, 'w') as f:
+        f.write(f"Nombre: {nombre}\nApellido: {apellido}\nEdad: {edad}\nTeléfono: {telefono}\nCorreo: {correo}\nDirección: {direccion}\n")
+
     empleados.append(empleado)
     guardar_empleados(empleados)
-    print(f"Empleado {nombre} {apellido} registrado correctamente.")
+    print(f"Empleado {nombre} {apellido} registrado correctamente en {empleado_dir}.")
+
+
 
 def iniciar_turno(empleados):
     nombre = input("Ingrese el nombre del empleado para iniciar turno: ").strip().lower()
     empleado = buscar_empleado(empleados, nombre)
     if empleado:
         empleado.iniciar_turno()
+        empleado_dir = os.path.join(REGISTRO_EMPLOYEES_DIR, f"{empleado.nombre}_{empleado.apellido}/")
+        turnos_file = os.path.join(empleado_dir, 'turnos.txt')
+        
+        # Guardar los turnos en la carpeta del empleado
+        with open(turnos_file, 'a') as f:
+            f.write(f"Inicio del turno: {empleado.turnos[-1]['inicio']}\n")
+        
         guardar_empleados(empleados)
     else:
         print(f"No se encontró ningún empleado con el nombre {nombre}.")
+
+
 
 def terminar_turno(empleados):
     nombre = input("Ingrese el nombre del empleado para terminar turno: ").strip().lower()
@@ -303,9 +326,18 @@ def mostrar_informe_empleado(empleados):
     nombre = input("Ingrese el nombre del empleado para ver el informe: ").strip().lower()
     empleado = buscar_empleado(empleados, nombre)
     if empleado:
-        print(empleado.mostrar_informe())
+        informe = empleado.mostrar_informe()
+        empleado_dir = os.path.join(REGISTRO_EMPLOYEES_DIR, f"{empleado.nombre}_{empleado.apellido}/")
+        informe_file = os.path.join(empleado_dir, 'informe.txt')
+        
+        with open(informe_file, 'w') as f:
+            f.write(informe)
+        
+        print(informe)
     else:
         print(f"No se encontró ningún empleado con el nombre {nombre}.")
+
+
 
 def listar_empleados(empleados):
     if empleados:

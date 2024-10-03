@@ -1,0 +1,6 @@
+Nombre: lius 
+Apellido: rinco perez
+Edad: 60
+Teléfono: 3245678709
+Correo: rincoperez@gmail.com
+Dirección: los alpez

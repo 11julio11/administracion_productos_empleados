@@ -2,97 +2,27 @@
 ==================================================
             FACTURA DE VENTA    
 ==================================================
-Fecha de venta: 25/09/2024 15:31:03
-Producto: moto g32
-Cantidad vendida: 4
-Precio unitario: $800000.00
-Descuento: 19.0%
-Total a pagar: $2592000.00
-Ciudad de destino: medellin
-Nombre del local: global tv
-==================================================
-
-
-==================================================
-            FACTURA DE VENTA    
-==================================================
-Fecha de venta: 25/09/2024 15:45:43
-Producto: tablet iphone
-Cantidad vendida: 6
-Precio unitario: $1600000.00
-Descuento: 29.0%
-Total a pagar: $6816000.00
-Ciudad de destino: cartagena
-Nombre del local: start ware
-==================================================
-
-
-==================================================
-            FACTURA DE VENTA    
-==================================================
-Fecha de venta: 25/09/2024 15:54:14
-Producto: tablet iphone
-Cantidad vendida: 6
-Precio unitario: $1600000.00
-Descuento: 29.0%
-Total a pagar: $6816000.00
-Ciudad de destino: bucaramanga
-Nombre del local: store suckit
-==================================================
-
-
-==================================================
-            FACTURA DE VENTA    
-==================================================
-Fecha de venta: 25/09/2024 16:46:56
-Producto: lonchera
-Cantidad vendida: 8
-Precio unitario: $78900.00
-Descuento: 18.0%
-Total a pagar: $517584.00
-Ciudad de destino: santa marta
-Nombre del local: frist ngint
-==================================================
-
-
-==================================================
-            FACTURA DE VENTA    
-==================================================
-Fecha de venta: 26/09/2024 15:09:55
-Producto: lonchera
-Cantidad vendida: 7
-Precio unitario: $78900.00
-Descuento: 18.0%
-Total a pagar: $452886.00
-Ciudad de destino: Manizales
-Nombre del local: store 
-==================================================
-
-
-==================================================
-            FACTURA DE VENTA    
-==================================================
-Fecha de venta: 28/09/2024 10:20:16
-Producto: control remoto
+Fecha de venta: 03/10/2024 16:33:04
+Producto: cepillo capilar
 Cantidad vendida: 5
-Precio unitario: $5000.00
-Descuento: 9.0%
-Total a pagar: $22750.00
-Ciudad de destino: bucaramanga
-Nombre del local: global store
+Precio unitario: $45000.00
+Descuento: 6.0%
+Total a pagar: $211500.00
+Ciudad de destino: cartagena
+Nombre del local: lions tv
 ==================================================
 
 
 ==================================================
             FACTURA DE VENTA    
 ==================================================
-Fecha de venta: 30/09/2024 14:21:39
-Producto: control remoto
-Cantidad vendida: 2
-Precio unitario: $5000.00
+Fecha de venta: 03/10/2024 17:45:52
+Producto: atomizador
+Cantidad vendida: 5
+Precio unitario: $15.00
 Descuento: 9.0%
-Total a pagar: $9100.00
-Ciudad de destino: manizales
-Nombre del local: store tecnology
+Total a pagar: $68.25
+Ciudad de destino: magangue
+Nombre del local: mangtv
 ==================================================
 

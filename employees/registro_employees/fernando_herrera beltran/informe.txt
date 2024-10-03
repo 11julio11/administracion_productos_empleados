@@ -1,0 +1,10 @@
+
+==================================================
+INFORME DEL EMPLEADO: fernando herrera beltran
+==================================================
+Edad: 45
+Teléfono: 3226778090
+Correo: beltran76@gmail.com
+Dirección: la gran esquina
+Fecha de ingreso: 03/10/2024
+Turno 1: Inicio: 03/10/2024 16:43:55 | Fin: 03/10/2024 16:45:02

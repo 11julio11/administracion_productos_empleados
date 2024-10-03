@@ -1,0 +1,6 @@
+Nombre: luis
+Apellido: rincon perez
+Edad: 34
+Teléfono: 3225446789
+Correo: perezrincon@gmail.com
+Dirección: via al mar

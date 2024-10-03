@@ -2,66 +2,21 @@
 ==================================================
             FACTURA DE GASTO    
 ==================================================
-Fecha de gasto: 25/09/2024
-Descripción: venta de moto g32
-Monto: $22032000.00
+Fecha de gasto: 03/10/2024
+Descripción: venta de cepillo capilar
+Monto: $211500.00
+Ciudad: Cali
+Local: look store
 ==================================================
 
 
 ==================================================
             FACTURA DE GASTO    
 ==================================================
-Fecha de gasto: 25/09/2024
-Descripción: venta de tablet iphone
-Monto: $6816000.00
-==================================================
-
-
-==================================================
-            FACTURA DE GASTO    
-==================================================
-Fecha de gasto: 25/09/2024
-Descripción: venta de tablet iphone
-Monto: $6816000.00
-==================================================
-
-
-==================================================
-            FACTURA DE GASTO    
-==================================================
-Fecha de gasto: 25/09/2024
-Descripción: venta de loncheras
-Monto: $517584.00
-==================================================
-
-
-==================================================
-            FACTURA DE GASTO    
-==================================================
-Fecha de gasto: 26/09/2024
-Descripción: venta de lonchera 
-Monto: $452886.00
-==================================================
-
-
-==================================================
-            FACTURA DE GASTO    
-==================================================
-Fecha de gasto: 28/09/2024
-Descripción: venta de control remoto
-Monto: $22750.00
-Ciudad: bucaramanga
-Local: global store
-==================================================
-
-
-==================================================
-            FACTURA DE GASTO    
-==================================================
-Fecha de gasto: 30/09/2024
-Descripción: venta de control remoto
-Monto: $10000.00
-Ciudad: manizales
-Local: store tecnology
+Fecha de gasto: 03/10/2024
+Descripción: venta de atomizador
+Monto: $68.25
+Ciudad: magangue
+Local: mangtv
 ==================================================
 
