@@ -22,3 +22,27 @@ Descuento: 9.0%
 Total a pagar: $887.25
 ==================================================
 
+
+==================================================
+          FACTURA DE INGRESO   
+==================================================
+Fecha de ingreso: 21/10/2024
+Producto: casco de moto honda
+Precio unitario: $67000.00
+Cantidad: 34
+Descuento: 15.0%
+Total a pagar: $1936300.00
+==================================================
+
+
+==================================================
+          FACTURA DE INGRESO   
+==================================================
+Fecha de ingreso: 21/10/2024
+Producto: cargador universal
+Precio unitario: $35000.00
+Cantidad: 33
+Descuento: 17.0%
+Total a pagar: $958650.00
+==================================================
+
