@@ -1,0 +1,6 @@
+Nombre: jesus david
+Apellido: julio romero
+Edad: 23
+Teléfono: 3245778890
+Correo: romeerodavid67@gmail.com
+Dirección: las palmas - clemencia bolivar

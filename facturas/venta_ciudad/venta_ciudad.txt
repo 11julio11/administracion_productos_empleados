@@ -1,3 +1,1 @@
-Producto: cepillo capilar | Cantidad: 7 | Ciudad: bucaramanga  | Local: global store2 | Fecha: 03/10/2024 16:01:49
-Producto: cepillo capilar | Cantidad: 5 | Ciudad: cartagena | Local: lions tv | Fecha: 03/10/2024 16:33:04
-Producto: atomizador | Cantidad: 5 | Ciudad: magangue | Local: mangtv | Fecha: 03/10/2024 17:45:52
+Producto: metro | Cantidad: 3 | Ciudad: Bogota | Local: ferreteria la gran esquina  | Fecha: 29/10/2024 14:33:22

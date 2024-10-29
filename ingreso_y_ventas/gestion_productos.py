@@ -1,7 +1,9 @@
-import json
-import os
-import signal
-from datetime import datetime
+# Importar módulos necesarios
+import json  # Manejo de datos JSON
+import os  # Interacción con el sistema operativo
+import signal  # Manejo de señales del sistema (ej. interrupciones)
+from datetime import datetime  # Manejo de fechas y horas
+
 
 # Definimos las rutas de las carpetas donde se almacenarán las facturas y registros.
 FACTURAS_DIR = './facturas/'

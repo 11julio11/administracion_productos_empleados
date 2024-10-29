@@ -2,21 +2,10 @@
 ==================================================
             FACTURA DE GASTO    
 ==================================================
-Fecha de gasto: 03/10/2024
-Descripción: venta de cepillo capilar
-Monto: $211500.00
-Ciudad: Cali
-Local: look store
-==================================================
-
-
-==================================================
-            FACTURA DE GASTO    
-==================================================
-Fecha de gasto: 03/10/2024
-Descripción: venta de atomizador
-Monto: $68.25
-Ciudad: magangue
-Local: mangtv
+Fecha de gasto: 29/10/2024
+Descripción: venta de 3 metros
+Monto: $65550.00
+Ciudad: Bogota
+Local: ferreteria la gran esquina
 ==================================================
 

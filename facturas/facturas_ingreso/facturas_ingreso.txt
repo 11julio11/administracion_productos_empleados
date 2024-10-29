@@ -2,47 +2,11 @@
 ==================================================
           FACTURA DE INGRESO   
 ==================================================
-Fecha de ingreso: 03/10/2024
-Producto: atomizador
-Precio unitario: $20000.00
-Cantidad: 45
-Descuento: 9.0%
-Total a pagar: $819000.00
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 03/10/2024
-Producto: atomizador
-Precio unitario: $15.00
-Cantidad: 65
-Descuento: 9.0%
-Total a pagar: $887.25
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 21/10/2024
-Producto: casco de moto honda
-Precio unitario: $67000.00
-Cantidad: 34
-Descuento: 15.0%
-Total a pagar: $1936300.00
-==================================================
-
-
-==================================================
-          FACTURA DE INGRESO   
-==================================================
-Fecha de ingreso: 21/10/2024
-Producto: cargador universal
-Precio unitario: $35000.00
-Cantidad: 33
-Descuento: 17.0%
-Total a pagar: $958650.00
+Fecha de ingreso: 29/10/2024
+Producto: metro
+Precio unitario: $23000.00
+Cantidad: 16
+Descuento: 5.0%
+Total a pagar: $349600.00
 ==================================================
 

@@ -1,15 +1,2 @@
-Producto: moto g32 | Cantidad vendida: 0 | Stock: 34
-Producto: tablet iphone | Cantidad vendida: 6 | Stock: 50
-Ciudad: bucaramanga | Local: store suckit | Producto: tablet iphone | Cantidad: 6 | Fecha: 25/09/2024 15:54:14
-Producto: lochera  | Cantidad vendida: 0 | Stock: 67
-Ciudad: santa marta | Local: frist ngint | Producto: lochera  | Cantidad: 8 | Fecha: 25/09/2024 15:48:32
-Producto: lonchera | Cantidad vendida: 7 | Stock: 27
-Ciudad: Manizales | Local: store  | Producto: lonchera | Cantidad: 7 | Fecha: 26/09/2024 15:09:55
-Producto: control remoto | Cantidad vendida: 7 | Stock: 5
-Ciudad: bucaramanga | Local: global store | Producto: control remoto | Cantidad: 5 | Fecha: 28/09/2024 10:20:16
-Ciudad: manizales | Local: store tecnology | Producto: control remoto | Cantidad: 2 | Fecha: 30/09/2024 14:21:39
-Producto: cepillo capilar | Cantidad vendida: 7 | Stock: 60
-Ciudad: bucaramanga  | Local: global store2 | Producto: cepillo capilar | Cantidad: 7 | Fecha: 03/10/2024 16:01:49
-Producto: audifonos  | Cantidad vendida: 0 | Stock: 45
-Producto: atomizador | Cantidad vendida: 5 | Stock: 60
-Ciudad: magangue | Local: mangtv | Producto: atomizador | Cantidad: 5 | Fecha: 03/10/2024 17:45:52
+Producto: metro | Cantidad vendida: 3 | Stock: 13
+Ciudad: Bogota | Local: ferreteria la gran esquina  | Producto: metro | Cantidad: 3 | Fecha: 29/10/2024 14:33:22

@@ -2,27 +2,13 @@
 ==================================================
             FACTURA DE VENTA    
 ==================================================
-Fecha de venta: 03/10/2024 16:33:04
-Producto: cepillo capilar
-Cantidad vendida: 5
-Precio unitario: $45000.00
-Descuento: 6.0%
-Total a pagar: $211500.00
-Ciudad de destino: cartagena
-Nombre del local: lions tv
-==================================================
-
-
-==================================================
-            FACTURA DE VENTA    
-==================================================
-Fecha de venta: 03/10/2024 17:45:52
-Producto: atomizador
-Cantidad vendida: 5
-Precio unitario: $15.00
-Descuento: 9.0%
-Total a pagar: $68.25
-Ciudad de destino: magangue
-Nombre del local: mangtv
+Fecha de venta: 29/10/2024 14:33:22
+Producto: metro
+Cantidad vendida: 3
+Precio unitario: $23000.00
+Descuento: 5.0%
+Total a pagar: $65550.00
+Ciudad de destino: Bogota
+Nombre del local: ferreteria la gran esquina 
 ==================================================
 
