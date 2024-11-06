@@ -6,6 +6,7 @@ from datetime import datetime  # Manejo de fechas y horas
 
 
 # Definimos las rutas de las carpetas donde se almacenarán las facturas y registros.
+
 FACTURAS_DIR = './facturas/'
 DISTRIBUCION_DIR = os.path.join(FACTURAS_DIR, 'distribucion/')
 VENTA_CIUDAD_DIR = os.path.join(FACTURAS_DIR, 'venta_ciudad/')
