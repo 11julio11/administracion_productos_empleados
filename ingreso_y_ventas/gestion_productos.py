@@ -31,10 +31,12 @@ class Producto:
     def obtener_fecha_actual(self):
         return datetime.now().strftime("%d/%m/%Y")
 
+
     def calcular_total(self):
         if self.descuento < 0 or self.descuento > 100:
             raise ValueError("El descuento debe estar entre 0 y 100.")
         return self.precio * self.cantidad * (1 - self.descuento / 100)
+
 
     def imprimir_factura_ingreso(self):
         return (
