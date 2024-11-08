@@ -1,11 +1,8 @@
-# Importar módulos necesarios
-import json  # Manejo de datos JSON
-import os  # Interacción con el sistema operativo
-import signal  # Manejo de señales del sistema (ej. interrupciones)
-from datetime import datetime  # Manejo de fechas y horas
+import json 
+import os  
+import signal  
+from datetime import datetime  
 
-
-# Definimos las rutas de las carpetas donde se almacenarán las facturas y registros.
 
 FACTURAS_DIR = './facturas/'
 DISTRIBUCION_DIR = os.path.join(FACTURAS_DIR, 'distribucion/')
@@ -15,11 +12,11 @@ VENTA_FACTURAS_DIR = os.path.join(FACTURAS_DIR, 'facturas_venta/')
 GASTOS_FACTURAS_DIR = os.path.join(FACTURAS_DIR, 'facturas_gastos/')
 INVENTARIO_FILE = 'inventario.json'
 
-EMPLOYEES_DIR = './employees/'  # Carpeta principal para empleados.
+EMPLOYEES_DIR = './employees/'  
 REGISTRO_EMPLOYEES_DIR = os.path.join(EMPLOYEES_DIR, 'registro_employees/')
-EMPLOYEES_FILE = 'employees_data.json'  # Archivo para guardar los datos de empleados.
+EMPLOYEES_FILE = 'employees_data.json' 
 
-# ---------------------------------- Gestión de Productos ----------------------------------
+
 class Producto:
     def __init__(self, nombre, precio, cantidad, descuento, fecha_de_compra=None, total=None, cantidad_vendida=0, ventas=None):
         self.nombre = nombre
@@ -88,8 +85,6 @@ class Producto:
             f"Cantidad Vendida: {self.cantidad_vendida}\n"
         )
 
-
-# ---------------------------------- Gestión de Gastos ----------------------------------
 class Gasto:
     def __init__(self, descripcion, monto, ciudad, local):
         self.descripcion = descripcion
@@ -114,8 +109,6 @@ class Gasto:
             f"{'=' * 50}\n"
         )
 
-
-# ---------------------------------- Gestión de Empleados ----------------------------------
 
 class Empleado:
     def __init__(self, nombre, apellido, edad, telefono, correo, direccion):
@@ -198,8 +191,6 @@ class Empleado:
         return empleado
 
 
-# ---------------------------------- Funciones Generales ----------------------------------
-
 def crear_carpetas():
     for directory in [
         FACTURAS_DIR, DISTRIBUCION_DIR, VENTA_CIUDAD_DIR,
@@ -253,7 +244,6 @@ def manejar_salida(signal_num, frame):
 
 signal.signal(signal.SIGINT, manejar_salida)
 
-# ---------------------------------- Gestión de Empleados ----------------------------------
 
 def cargar_empleados():
     if os.path.exists(EMPLOYEES_FILE):
@@ -283,11 +273,9 @@ def registrar_empleado(empleados):
     
     empleado = Empleado(nombre, apellido, edad, telefono, correo, direccion)
     
-    # Crear la carpeta individual del empleado
     empleado_dir = os.path.join(REGISTRO_EMPLOYEES_DIR, f"{nombre}_{apellido}/")
     os.makedirs(empleado_dir, exist_ok=True)
 
-    # Guardar la información del empleado en un archivo
     info_file = os.path.join(empleado_dir, 'informacion_empleado.txt')
     with open(info_file, 'w') as f:
         f.write(f"Nombre: {nombre}\nApellido: {apellido}\nEdad: {edad}\nTeléfono: {telefono}\nCorreo: {correo}\nDirección: {direccion}\n")
@@ -306,7 +294,6 @@ def iniciar_turno(empleados):
         empleado_dir = os.path.join(REGISTRO_EMPLOYEES_DIR, f"{empleado.nombre}_{empleado.apellido}/")
         turnos_file = os.path.join(empleado_dir, 'turnos.txt')
         
-        # Guardar los turnos en la carpeta del empleado
         with open(turnos_file, 'a') as f:
             f.write(f"Inicio del turno: {empleado.turnos[-1]['inicio']}\n")
         
@@ -376,7 +363,6 @@ def gestionar_empleados(empleados):
         else:
             print("Opción no válida. Intente de nuevo.")
 
-# ---------------------------------- Menú Principal ----------------------------------
 
 def main():
     crear_carpetas()
