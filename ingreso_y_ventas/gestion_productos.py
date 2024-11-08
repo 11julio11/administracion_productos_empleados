@@ -171,6 +171,7 @@ class Empleado:
             ]
         }
 
+
     @staticmethod
     def from_dict(data):
         empleado = Empleado(
