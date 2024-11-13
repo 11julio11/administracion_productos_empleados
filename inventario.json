@@ -1,1 +1,19 @@
-{"metro": {"nombre": "metro", "precio": 23000.0, "cantidad": 13, "descuento": 5.0, "fecha_de_compra": "29/10/2024", "total": 349600.0, "cantidad_vendida": 3, "ventas": [{"cantidad": 3, "ciudad": "Bogota", "local": "ferreteria la gran esquina ", "fecha": "29/10/2024 14:33:22"}]}}
+{
+    "metro": {
+        "nombre": "metro",
+        "precio": 23000.0,
+        "cantidad": 13,
+        "descuento": 5.0,
+        "fecha_de_compra": "29/10/2024",
+        "total": 349600.0,
+        "cantidad_vendida": 3,
+        "ventas": [
+            {
+                "cantidad": 3,
+                "ciudad": "Bogota",
+                "local": "ferreteria la gran esquina ",
+                "fecha": "29/10/2024 14:33:22"
+            }
+        ]
+    }
+}
