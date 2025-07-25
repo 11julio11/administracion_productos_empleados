@@ -9,3 +9,14 @@ Ciudad: Bogota
 Local: ferreteria la gran esquina
 ==================================================
 
+
+==================================================
+            FACTURA DE GASTO    
+==================================================
+Fecha de gasto: 25/07/2025
+Descripción: venta de speaker
+Monto: $97000.00
+Ciudad: cali
+Local: destort
+==================================================
+

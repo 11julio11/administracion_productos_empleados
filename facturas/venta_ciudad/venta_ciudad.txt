@@ -1,1 +1,2 @@
 Producto: metro | Cantidad: 3 | Ciudad: Bogota | Local: ferreteria la gran esquina  | Fecha: 29/10/2024 14:33:22
+Producto: speaker | Cantidad: 2 | Ciudad: cali | Local: destort | Fecha: 25/07/2025 00:46:50

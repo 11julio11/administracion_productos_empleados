@@ -1,0 +1,10 @@
+
+==================================================
+INFORME DEL EMPLEADO: juanito animaña
+==================================================
+Edad: 46
+Teléfono: 3245667890
+Correo: juanito11@gmail.com
+Dirección: las caracas
+Fecha de ingreso: 25/07/2025
+Turno 1: Inicio: 25/07/2025 00:51:54 | Fin: 25/07/2025 00:52:17

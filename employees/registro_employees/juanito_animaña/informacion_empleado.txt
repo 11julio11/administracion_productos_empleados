@@ -1,0 +1,6 @@
+Nombre: juanito
+Apellido: animaña
+Edad: 46
+Teléfono: 3245667890
+Correo: juanito11@gmail.com
+Dirección: las caracas

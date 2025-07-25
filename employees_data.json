@@ -1,17 +1,1 @@
-[
-    {
-        "nombre": "jesus david",
-        "apellido": "julio romero",
-        "edad": "23",
-        "telefono": "3245778890",
-        "correo": "romeerodavid67@gmail.com",
-        "direccion": "las palmas - clemencia bolivar",
-        "fecha_ingreso": "29/10/2024",
-        "turnos": [
-            {
-                "inicio": "2024-10-29 14:45:16",
-                "fin": "2024-10-29 14:47:17"
-            }
-        ]
-    }
-]
+[{"nombre": "jesus david", "apellido": "julio romero", "edad": "23", "telefono": "3245778890", "correo": "romeerodavid67@gmail.com", "direccion": "las palmas - clemencia bolivar", "fecha_ingreso": "29/10/2024", "turnos": [{"inicio": "2024-10-29 14:45:16", "fin": "2024-10-29 14:47:17"}]}, {"nombre": "juanito", "apellido": "anima\u00f1a", "edad": "46", "telefono": "3245667890", "correo": "juanito11@gmail.com", "direccion": "las caracas", "fecha_ingreso": "25/07/2025", "turnos": [{"inicio": "2025-07-25 00:51:54", "fin": "2025-07-25 00:52:17"}]}]

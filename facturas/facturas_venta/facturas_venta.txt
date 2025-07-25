@@ -12,3 +12,17 @@ Ciudad de destino: Bogota
 Nombre del local: ferreteria la gran esquina 
 ==================================================
 
+
+==================================================
+            FACTURA DE VENTA    
+==================================================
+Fecha de venta: 25/07/2025 00:46:50
+Producto: speaker
+Cantidad vendida: 2
+Precio unitario: $50.00
+Descuento: 3.0%
+Total a pagar: $97.00
+Ciudad de destino: cali
+Nombre del local: destort
+==================================================
+

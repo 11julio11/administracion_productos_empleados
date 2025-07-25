@@ -1,2 +1,4 @@
 Producto: metro | Cantidad vendida: 3 | Stock: 13
 Ciudad: Bogota | Local: ferreteria la gran esquina  | Producto: metro | Cantidad: 3 | Fecha: 29/10/2024 14:33:22
+Producto: speaker | Cantidad vendida: 2 | Stock: 5
+Ciudad: cali | Local: destort | Producto: speaker | Cantidad: 2 | Fecha: 25/07/2025 00:46:50
